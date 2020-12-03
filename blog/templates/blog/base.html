@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+    <head>
+        <title>YourPsychologist | Blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <header class="page-header">
+            <h1 class="page-header__content">
+                <a class="page-header__link" href="/">YourPsychologist | Blog</a>
+            </h1>
+        </header>
+        <main class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

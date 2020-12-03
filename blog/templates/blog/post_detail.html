@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <section class="post">
+        {% if post.published_date %}
+            <p class="post__date">{{ post.published_date }}</p>
+        {% endif %}
+        <h2 class="post__heading">
+            <a class="post__heading-link" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+        </h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </section>
+{% endblock %}
